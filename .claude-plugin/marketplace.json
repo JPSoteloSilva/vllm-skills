@@ -1,0 +1,45 @@
+{
+  "name": "vllm-skills",
+  "description": "A collection of Claude Code skills for deploying and benchmarking vLLM.",
+  "owner": {
+    "name": "vLLM Project",
+    "url": "https://github.com/vllm-project"
+  },
+  "plugins": [
+    {
+      "name": "vllm-deploy-docker",
+      "version": "1.0.0",
+      "description": "Deploy vLLM using Docker with NVIDIA GPU support and run the OpenAI-compatible server.",
+      "author": {
+        "name": "vLLM Project",
+        "url": "https://github.com/vllm-project"
+      },
+      "source": "./skills/vllm-deploy-docker"
+    },
+    {
+      "name": "vllm-deploy-simple",
+      "version": "1.0.0",
+      "description": "Quickly install and deploy vLLM, then validate the OpenAI-compatible API.",
+      "author": {
+        "name": "vLLM Project",
+        "url": "https://github.com/vllm-project"
+      },
+      "source": "./skills/vllm-deploy-simple"
+    },
+    {
+      "name": "vllm-prefix-cache-bench",
+      "version": "1.0.0",
+      "description": "Benchmark vLLM automatic prefix caching efficiency with synthetic and dataset-driven workflows.",
+      "author": {
+        "name": "vLLM Project",
+        "url": "https://github.com/vllm-project"
+      },
+      "source": "./skills/vllm-prefix-cache-bench"
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-03-30T17:53:41.615Z",
+    "plugin_count": 3
+  }
+}

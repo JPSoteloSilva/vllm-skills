@@ -6,7 +6,7 @@ A collection of skills for deploying and invoking vLLM. This project follows the
 
 This repository provides modular, reusable agent skills required to operate and invoke vLLM, following the Anthropics `SKILL.md` specification. Each skill is a self-contained directory implementing automation, scripts, and metadata for a specific operational task.
 
-All skills adhere to the Anthropics skills template and can be copied into a Claude Code skills directory for use.
+All skills adhere to the Anthropics skills template and can be installed directly from Claude Code as a plugin marketplace (no manual clone/copy required).
 
 ## Skills Index
 
@@ -30,28 +30,23 @@ Deploy vLLM as an online service with OpenAI-compatible API locally.
 
 **Quick Start for Claude Code:**
 
-1. Clone the repository
+1. Add this repository as a Claude Code plugin marketplace:
 
    ```bash
-   git clone https://github.com/vllm-project/vllm-skills.git
-   cd vllm-skills
+   /plugin marketplace add JPSoteloSilva/vllm-skills
    ```
 
-2. Copy skills needed to your Claude Code skills directory
+2. Install a skill from the marketplace:
 
-   Copy the skills to global skill folder:
-   
    ```bash
-   cp -r skills/vllm-deploy-simple ~/.claude/skills/
+   /plugin install vllm-deploy-simple@vllm-skills
    ```
 
-   Or copy to the project skill folder:
-   
-   ```bash
-   cp -r skills/vllm-deploy-simple .claude/skills/
-   ```
+   You can also install:
+   - `vllm-deploy-docker@vllm-skills`
+   - `vllm-prefix-cache-bench@vllm-skills`
 
-3. Use the skills (with sample user prompts):
+3. Use the installed skill (with sample user prompts):
 
    Once installed, you can use the skill in Claude Code like:
 
@@ -70,7 +65,30 @@ Deploy vLLM as an online service with OpenAI-compatible API locally.
    ```
 
    ```
-   Set up vLLM in a virtual environment at current folder with Qwen2.5-1.5B-Instruct
+    Set up vLLM in a virtual environment at current folder with Qwen2.5-1.5B-Instruct
+    ```
+
+### Manual installation (alternative)
+
+If you prefer local copy-based installation:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/vllm-project/vllm-skills.git
+   cd vllm-skills
+   ```
+
+2. Copy the skills to global skill folder:
+   
+   ```bash
+   cp -r skills/vllm-deploy-simple ~/.claude/skills/
+   ```
+
+   Or copy to the project skill folder:
+   
+   ```bash
+   cp -r skills/vllm-deploy-simple .claude/skills/
    ```
 
 ## Supported Models
