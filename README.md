@@ -109,6 +109,11 @@ This project follows the [anthropics/skills](https://github.com/anthropics/skill
    ```
 3. Add optional `scripts/`, `references/`, and `assets/` directories
 4. Update this README with your skill documentation
+5. Update `.claude-plugin/marketplace.json` when adding or removing skills so marketplace installs remain consistent
+
+For contributor guidance in Claude Code, use the repository contribution skill at:
+
+`.claude/skills/vllm-skills-contributing/SKILL.md`
 
 ## License
 
